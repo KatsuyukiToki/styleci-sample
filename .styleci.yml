@@ -1,9 +1,12 @@
-php:
-  preset: psr2
-  enabled:
-    - alpha_ordered_imports
-  disabled:
-    - length_ordered_imports
-    - unused_use
-  finder:
-    not-name:
+preset: psr2
+enabled:
+  - alpha_ordered_imports
+disabled:
+  - length_ordered_imports
+  - unused_use
+finder:
+  exclude:
+    - "tests"
+    - "vendor"
+  not-name:
+    - "config.php"
