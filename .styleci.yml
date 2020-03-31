@@ -1,12 +1,10 @@
 preset: psr2
-enabled:
-  - alpha_ordered_imports
-disabled:
-  - length_ordered_imports
-  - unused_use
+risky: true
 finder:
   exclude:
-    - "tests"
-    - "vendor"
-  not-name:
-    - "config.php"
+    - modules
+    - node_modules
+    - storage
+    - vendor
+  name: "*.php"
+  not-name: "*.blade.php"
